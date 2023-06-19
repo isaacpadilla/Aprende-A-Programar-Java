@@ -1,47 +1,21 @@
-package suma;
-
-public class Suma {
-
-    private int Uv1;
-    private int Uv2;
-    private int Res;
-
-    public Suma(int ValorUno, int ValorDos) {
-        this.Uv1 = ValorUno;
-        this.Uv2 = ValorDos;
-
-    }
-
-    public void Operacion() {
-        Res = Uv1 + Uv2;
-
-    }
-
-    public void Imprimir() {
-        Operacion();
-        System.out.println("La suma es " + Res);
-
-    }
-}
-
-package suma;
+package org.example;
 
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         Scanner ent = new Scanner(System.in);
-
-        System.out.println("Dame el primer valor de la suma");
-        int ValorUno = ent.nextInt();
-        System.out.println("Dame el segundo valor de la suma");
-        int ValorDos = ent.nextInt();
+        int Uv1 = 0;
+        int Uv2 = 0;
         int Res = 0;
-        Suma Resultado = new Suma(ValorUno, ValorDos);
-        Resultado.Imprimir();
+        System.out.println("Dame el primer valor de la suma");
+        Uv1 = ent.nextInt();
+        System.out.println("Dame el segundo valor de la suma");
+        Uv2 = ent.nextInt();
+        Res = Uv1 + Uv2;
+        System.out.println("La suma es: " + Res);
 
+        // Cerrar el objeto Scanner
+        ent.close();
     }
-
 }
-
